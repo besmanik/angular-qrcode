@@ -53,17 +53,3 @@ import { QrcodeModule } from 'qrcode-angular';
 | `icon`       | `string`                          | -                                 | QR code include logo url  |
 | `iconSize`   | `number`                          | `40`                              | QR code include logo size |
 | `errorLevel` | `'L'｜'M'｜'Q'｜'H'`              | `H`                               | Error Code Level          |
-
-## Notice
-
-### Invalid QR Code
-
-`value` has a conservative upper limit of 738 or fewer strings. If error correction levels are used, the `value` upper limit will be lowered.
-
-### QR Code error correction level
-
-The ErrorLevel means that the QR code can be scanned normally after being blocked, and the maximum area that can be blocked is the error correction rate.
-
-Generally, the QR code is divided into 4 error correction levels: Level `L` can correct about `7%` errors, Level `M` can correct about `15%` errors, Level `Q` can correct about `25%` errors, and Level `H` can correct about `30%` errors. 
-
-> qrcode-angular bundles the [qrcodegen](https://github.com/nayuki/QR-Code-generator/blob/942f4319a6ba913dbc6775d8e665ccf18f401d83/typescript-javascript/qrcodegen.ts), which is available under the [MIT license](https://github.com/nayuki/QR-Code-generator/blob/942f4319a6ba913dbc6775d8e665ccf18f401d83/typescript-javascript/qrcodegen.ts).
